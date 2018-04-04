@@ -1,0 +1,26 @@
+{
+    "name": "squirrel-lang",
+    "displayName": "squirrel-lang",
+    "description": "Support for the Squirrel programming language",
+    "version": "0.0.1",
+    "publisher": "escamilla",
+    "engines": {
+        "vscode": "^1.21.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "squirrel",
+            "aliases": ["Squirrel", "squirrel"],
+            "extensions": [".sq",".squirrel"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "squirrel",
+            "scopeName": "source.squirrel",
+            "path": "./syntaxes/squirrel.tmLanguage.json"
+        }]
+    }
+}
