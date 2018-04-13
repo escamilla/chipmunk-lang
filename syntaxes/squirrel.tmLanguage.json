@@ -1,101 +1,101 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Squirrel",
-	"scopeName": "source.squirrel",
-	"patterns": [
-		{
-			"include": "#comment"
-		},
-		{
-			"include": "#symbolic-expressions"
-		},
-		{
-			"include": "#special-forms"
-		},
-		{
-			"include": "#string"
-		},
-		{
-			"include": "#constants"
-		}
-	],
-	"repository": {
-		"comment": {
-			"patterns": [
-				{
-					"begin": "\\[",
-					"end": "\\]",
-					"name": "comment.block.squirrel"
-				}
-			]
-		},
-		"constants": {
-			"patterns": [
-				{
-					"match": "(nil)",
-					"name": "constant.language.nil.squirrel"
-				},
-				{
-					"match": "(true|false)",
-					"name": "constant.language.boolean.squirrel"
-				},
-				{
-					"match": "-?\\d+(\\.\\d+)?",
-					"name": "constant.numeric.squirrel"
-				}
-			]
-		},
-		"special-forms": {
-			"patterns": [
-				{
-					"match": "(def|if|lambda)",
-					"name": "keyword.control.squirrel"
-				},
-				{
-					"match": "(?<=lambda)\\s+\\((.*?)\\)",
-					"captures": {
-						"1": {
-							"name": "variable.parameter.squirrel"
-						}
-					}
-				}
-			]
-		},
-		"string": {
-			"patterns": [
-				{
-					"begin": "\"",
-					"end": "\"",
-					"name": "string.quoted.double.squirrel"
-				}
-			]
-		},
-		"symbolic-expressions": {
-			"begin": "\\(",
-			"end": "\\)",
-			"name": "meta.expression.squirrel",
-			"patterns": [
-				{
-					"include": "#special-forms"
-				},
-				{
-					"include": "#string"
-				},
-				{
-					"include": "#constants"
-				},
-				{
-					"include": "#symbolic-expressions"
-				},
-				{
-					"match": "(?<=\\()(.+?)(?=\\s|\\))",
-					"captures": {
-						"1": {
-							"name": "entity.name.function.squirrel"
-						}
-					}
-				}
-			]
-		}
-	}
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Squirrel",
+  "scopeName": "source.squirrel",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#symbolic-expressions"
+    },
+    {
+      "include": "#special-forms"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#constants"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "begin": "\\[",
+          "end": "\\]",
+          "name": "comment.block.squirrel"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "match": "(nil)",
+          "name": "constant.language.nil.squirrel"
+        },
+        {
+          "match": "(true|false)",
+          "name": "constant.language.boolean.squirrel"
+        },
+        {
+          "match": "-?\\d+(\\.\\d+)?",
+          "name": "constant.numeric.squirrel"
+        }
+      ]
+    },
+    "special-forms": {
+      "patterns": [
+        {
+          "match": "(def|if|lambda)",
+          "name": "keyword.control.squirrel"
+        },
+        {
+          "match": "(?<=lambda)\\s+\\((.*?)\\)",
+          "captures": {
+            "1": {
+              "name": "variable.parameter.squirrel"
+            }
+          }
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "begin": "\"",
+          "end": "\"",
+          "name": "string.quoted.double.squirrel"
+        }
+      ]
+    },
+    "symbolic-expressions": {
+      "begin": "\\(",
+      "end": "\\)",
+      "name": "meta.expression.squirrel",
+      "patterns": [
+        {
+          "include": "#special-forms"
+        },
+        {
+          "include": "#strings"
+        },
+        {
+          "include": "#constants"
+        },
+        {
+          "include": "#symbolic-expressions"
+        },
+        {
+          "match": "(?<=\\()(.+?)(?=\\s|\\))",
+          "captures": {
+            "1": {
+              "name": "entity.name.function.squirrel"
+            }
+          }
+        }
+      ]
+    }
+  }
 }
