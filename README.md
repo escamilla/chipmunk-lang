@@ -1,6 +1,6 @@
-# squirrel-lang README
+# chipmunk-lang README
 
-This is the README for your extension "squirrel-lang". After writing up a brief description, we recommend including the following sections.
+This is the README for your extension "chipmunk-lang". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 

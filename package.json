@@ -1,26 +1,42 @@
 {
-    "name": "squirrel-lang",
-    "displayName": "squirrel-lang",
-    "description": "Support for the Squirrel programming language",
-    "version": "0.0.1",
-    "publisher": "escamilla",
-    "engines": {
-        "vscode": "^1.21.0"
-    },
-    "categories": [
-        "Languages"
+  "name": "chipmunk-lang",
+  "displayName": "chipmunk-lang",
+  "description": "Visual Studio Code support for the Chipmunk programming language",
+  "version": "0.0.1",
+  "license": "MIT",
+  "publisher": "escamilla",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/escamilla/chipmunk-vscode.git"
+  },
+  "engines": {
+    "vscode": "^1.21.0"
+  },
+  "categories": [
+    "Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "chipmunk",
+        "aliases": [
+          "Chipmunk",
+          "chipmunk"
+        ],
+        "extensions": [
+          ".ch",
+          ".chip",
+          ".chipmunk"
+        ],
+        "configuration": "./language-configuration.json"
+      }
     ],
-    "contributes": {
-        "languages": [{
-            "id": "squirrel",
-            "aliases": ["Squirrel", "squirrel"],
-            "extensions": [".sq",".squirrel"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "squirrel",
-            "scopeName": "source.squirrel",
-            "path": "./syntaxes/squirrel.tmLanguage.json"
-        }]
-    }
+    "grammars": [
+      {
+        "language": "chipmunk",
+        "scopeName": "source.chipmunk",
+        "path": "./syntaxes/chipmunk.tmLanguage.json"
+      }
+    ]
+  }
 }

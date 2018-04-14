@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "Squirrel",
-  "scopeName": "source.squirrel",
+  "name": "Chipmunk",
+  "scopeName": "source.chipmunk",
   "patterns": [
     {
       "include": "#comments"
@@ -25,7 +25,7 @@
         {
           "begin": "\\[",
           "end": "\\]",
-          "name": "comment.block.squirrel"
+          "name": "comment.block.chipmunk"
         }
       ]
     },
@@ -33,15 +33,15 @@
       "patterns": [
         {
           "match": "(nil)",
-          "name": "constant.language.nil.squirrel"
+          "name": "constant.language.nil.chipmunk"
         },
         {
           "match": "(true|false)",
-          "name": "constant.language.boolean.squirrel"
+          "name": "constant.language.boolean.chipmunk"
         },
         {
           "match": "-?\\d+(\\.\\d+)?",
-          "name": "constant.numeric.squirrel"
+          "name": "constant.numeric.chipmunk"
         }
       ]
     },
@@ -49,13 +49,13 @@
       "patterns": [
         {
           "match": "(def|if|lambda)",
-          "name": "keyword.control.squirrel"
+          "name": "keyword.control.chipmunk"
         },
         {
           "match": "(?<=lambda)\\s+\\((.*?)\\)",
           "captures": {
             "1": {
-              "name": "variable.parameter.squirrel"
+              "name": "variable.parameter.chipmunk"
             }
           }
         }
@@ -66,14 +66,14 @@
         {
           "begin": "\"",
           "end": "\"",
-          "name": "string.quoted.double.squirrel"
+          "name": "string.quoted.double.chipmunk"
         }
       ]
     },
     "symbolic-expressions": {
       "begin": "\\(",
       "end": "\\)",
-      "name": "meta.expression.squirrel",
+      "name": "meta.expression.chipmunk",
       "patterns": [
         {
           "include": "#special-forms"
@@ -91,7 +91,7 @@
           "match": "(?<=\\()(.+?)(?=\\s|\\))",
           "captures": {
             "1": {
-              "name": "entity.name.function.squirrel"
+              "name": "entity.name.function.chipmunk"
             }
           }
         }
