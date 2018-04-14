@@ -1,13 +1,13 @@
 {
   "name": "chipmunk-lang",
-  "displayName": "chipmunk-lang",
+  "displayName": "Chipmunk Programming Language",
   "description": "Visual Studio Code support for the Chipmunk programming language",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "license": "MIT",
-  "publisher": "escamilla",
+  "publisher": "jescamilla",
   "repository": {
     "type": "git",
-    "url": "https://github.com/escamilla/chipmunk-vscode.git"
+    "url": "https://github.com/escamilla/chipmunk-lang.git"
   },
   "engines": {
     "vscode": "^1.21.0"

@@ -76,6 +76,9 @@
       "name": "meta.expression.chipmunk",
       "patterns": [
         {
+          "include": "#comments"
+        },
+        {
           "include": "#special-forms"
         },
         {
