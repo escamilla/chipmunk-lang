@@ -2,7 +2,7 @@
   "name": "chipmunk-lang",
   "displayName": "Chipmunk Programming Language",
   "description": "Visual Studio Code support for the Chipmunk programming language",
-  "version": "0.1.0",
+	"version": "0.2.0",
   "license": "MIT",
   "publisher": "jescamilla",
   "repository": {
@@ -13,7 +13,7 @@
     "vscode": "^1.21.0"
   },
   "categories": [
-    "Languages"
+		"Programming Languages"
   ],
   "contributes": {
     "languages": [
@@ -24,9 +24,7 @@
           "chipmunk"
         ],
         "extensions": [
-          ".ch",
-          ".chip",
-          ".chipmunk"
+					".ch"
         ],
         "configuration": "./language-configuration.json"
       }

@@ -1,14 +1,13 @@
 {
   "comments": {
-    // symbols used for start and end a block comment
-    "blockComment": [
-      "[",
-      "]"
-    ]
+    "lineComment": ";",
   },
-  // symbols used as brackets
   "brackets": [
     [
+      "{",
+      "}"
+    ],
+    [
       "[",
       "]"
     ],
@@ -17,24 +16,33 @@
       ")"
     ]
   ],
-  // symbols that are auto closed when typing
   "autoClosingPairs": [
-    [
-      "[",
-      "]"
-    ],
-    [
-      "(",
-      ")"
-    ],
-    [
-      "\"",
-      "\""
-    ]
+    {
+      "open": "{",
+      "close": "}"
+    },
+    {
+      "open": "(",
+      "close": ")"
+    },
+    {
+      "open": "[",
+      "close": "]"
+    },
+    {
+      "open": "\"",
+      "close": "\"",
+      "notIn": [
+        "string"
+      ]
+    }
   ],
-  // symbols that that can be used to surround a selection
   "surroundingPairs": [
     [
+      "{",
+      "}"
+    ],
+    [
       "[",
       "]"
     ],
@@ -45,6 +53,6 @@
     [
       "\"",
       "\""
-    ]
+    ],
   ]
 }

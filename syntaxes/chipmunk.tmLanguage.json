@@ -13,6 +13,12 @@
       "include": "#special-forms"
     },
     {
+      "include": "#vectors"
+    },
+    {
+      "include": "#maps"
+    },
+    {
       "include": "#strings"
     },
     {
@@ -23,9 +29,8 @@
     "comments": {
       "patterns": [
         {
-          "begin": "\\[",
-          "end": "\\]",
-          "name": "comment.block.chipmunk"
+          "match": "(;).*$\\n?",
+          "name": "comment.line.chipmunk"
         }
       ]
     },
@@ -45,10 +50,25 @@
         }
       ]
     },
+    "maps": {
+      "begin": "\\{",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.map.start.chipmunk"
+        }
+      },
+      "end": "\\}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.map.end.chipmunk"
+        }
+      },
+      "name": "meta.structure.map.chipmunk"
+    },
     "special-forms": {
       "patterns": [
         {
-          "match": "(def|if|lambda)",
+          "match": "(argv|def|if|lambda)",
           "name": "keyword.control.chipmunk"
         },
         {
@@ -99,6 +119,21 @@
           }
         }
       ]
+    },
+    "vectors": {
+      "begin": "\\[",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.map.vector.chipmunk"
+        }
+      },
+      "end": "\\]",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.map.vector.chipmunk"
+        }
+      },
+      "name": "meta.structure.vector.chipmunk"
     }
   }
 }
